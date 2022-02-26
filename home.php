@@ -11,13 +11,25 @@
 	<head>
 		<meta charset="UTF-8">
 
-		<title>Twitter clone</title>
-
+		<title>Freedom</title>
+	
 		<!-- jquery - link cdn -->
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script type="text/javascript" src ="admin/validaCampo.js"></script>
 
 		<!-- bootstrap - link cdn -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
+		<script type="text/javascript">
+			$(document).ready( function(){
+				$('#btnPostagem').click(function(){
+					if($('#textoPostagem').val().length > 0){
+						alert("Campo Preenchido");
+					}
+				});
+			});
+		</script>
 
     	</head>
 
@@ -64,9 +76,9 @@
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<div class="input-group">
-							<input type="text" id="text_tweet" class="form-control" placeholder="O que está acontecendo agora?" maxlength="140" />
+							<input type="text" id="textoPostagem" class="form-control" placeholder="O que está acontecendo agora?" maxlength="140" />
 							<span class="input-group-btn">
-								<button class="btn btn-default" id="btn_tweet" type="button">Tweet</button>
+								<button class="btn btn-default" id="btnPostagem" type="button">Tweet</button>
 							</span>
 						</div>
 					</div>

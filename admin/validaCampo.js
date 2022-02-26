@@ -26,5 +26,16 @@ $(document).ready( function(){
        if (campoVazio){
            return false;
        }
+    
     });
-});						
+
+    $('#btnPostagem').click(function(){
+        if($('#textoPostagem').val() == ''){
+            alert('Sua Postagem Está Vazia');
+            $('#textoPostagem').css({'border-color':'#A94442'});
+            campoVazio = true;
+        }
+    });    
+
+});	
+

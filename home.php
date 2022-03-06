@@ -1,3 +1,4 @@
+
 <?php
 	session_start();
 
@@ -21,16 +22,6 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
 
-		<script type="text/javascript">
-			$(document).ready( function(){
-				$('#btnPostagem').click(function(){
-					if($('#textoPostagem').val().length > 0){
-						alert("Campo Preenchido");
-					}
-				});
-			});
-		</script>
-
     	</head>
 
 	<body>
@@ -45,7 +36,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<img src="imagens/icone_twitter.png" />
+					
 				</div>
 
 				<div id="navbar" class="navbar-collapse collapse">
@@ -64,7 +55,7 @@
 						<h4><?php echo $_SESSION['usuario']; ?></h4>
 						<hr />
 						<div class="col-md-6">
-							TWEETS <br /> 1
+							POSTS <br /> 1
 						</div>
 						<div class="col-md-6">
 							SEGUIDORES <br /> 1
@@ -75,13 +66,18 @@
 			<div class="col-md-6">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<div class="input-group">
-							<input type="text" id="textoPostagem" class="form-control" placeholder="O que está acontecendo agora?" maxlength="140" />
+						<form id="formPostagem" method="POST" class="input-group">
+							<input type="text" name="textoPostagem" id="textoPostagem" class="form-control" placeholder="O que está acontecendo agora?" maxlength="140" />
 							<span class="input-group-btn">
-								<button class="btn btn-default" id="btnPostagem" type="button">Tweet</button>
+								<button class="btn btn-default" id="btnPostagem" type="button">POST</button>
 							</span>
-						</div>
+						</form>
 					</div>
+
+					
+				</div>
+				<div id="postagens" class="list-group">
+
 				</div>
 			</div>
 			<div class="col-md-3">

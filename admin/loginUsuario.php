@@ -16,9 +16,9 @@ $consulta = mysqli_query($link,$query);
 if ($consulta){ //Usuário Existe ?
     $dadosUsuario = mysqli_fetch_array($consulta);//Salva os Dados do Usuário em um array
     if (isset($dadosUsuario['usuario']) && isset($dadosUsuario['senha'])){
-        
+        $_SESSION['idUsuario'] = $dadosUsuario['idUsuario'];
         $_SESSION['usuario'] = $dadosUsuario['usuario'];
-        $_SESSION['email'] = $dadosUsuario['email']; //Salva a Informação do Usuário em uma sessão
+        $_SESSION['email'] = $dadosUsuario['email']; //Salva as Informações do Usuário em uma sessão
         echo '<script>alert("Login Bem-Sucedido , Redirecionando");</script>';
         echo "<meta http-equiv='refresh' content='0;url=../home.php'>";
     }

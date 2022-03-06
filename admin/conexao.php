@@ -5,7 +5,7 @@
         //usuario
         private $usuario = "root";
         //senha
-        private $senha = "";
+        private $senha = "password";
         //banco de dados
         private $database = "twitterClone";
 

@@ -64,6 +64,3 @@ $(document).ready( function(){
     atualizaPostagem();
 
 });	
-
-git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"

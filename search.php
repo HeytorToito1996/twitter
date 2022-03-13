@@ -16,7 +16,7 @@
 	
 		<!-- jquery - link cdn -->
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-		<script type="text/javascript" src ="admin/validaCampo.js"></script>
+		<script type="text/javascript" src ="admin/validaBusca.js"></script>
 
 		<!-- bootstrap - link cdn -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -42,6 +42,7 @@
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="admin/finalizaSessao.php">Sair</a></li>
+                        <li><a href="home.php">Home</a></li>
 					</ul>
 				</div><!--/.nav-collapse -->
 			</div>
@@ -66,24 +67,24 @@
 			<div class="col-md-6">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<form id="formPostagem" method="POST" class="input-group">
-							<input type="text" name="textoPostagem" id="textoPostagem" class="form-control" placeholder="O que está acontecendo agora?" maxlength="140" />
+						<form id="formBuscaPessoa" method="POST" class="input-group">
+							<input type="text" name="nomePessoa" id="nomePessoa" class="form-control" placeholder="Procurando Alguém ??" maxlength="140" />
 							<span class="input-group-btn">
-								<button class="btn btn-default" id="btnPostagem" type="button">POST</button>
+								<button class="btn btn-default" id="btnBusca" type="button">Buscar</button>
 							</span>
 						</form>
 					</div>
 
 					
 				</div>
-				<div id="postagens" class="list-group">
+				<div id="pessoas" class="list-group">
 
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="panel panel-default">
 					<div class="panel-body">
-						<h4><a href="search.php">Procurar por pessoas</a></h4>
+						
 					</div>
 				</div>
 			</div>
